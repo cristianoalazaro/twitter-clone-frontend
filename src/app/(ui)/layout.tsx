@@ -6,6 +6,8 @@ import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { ReactNode } from "react";
 import { SearchInput } from "./search-input";
+import { TrendingArea } from "./trending-area";
+import { RecomendationArea } from "./recomendation-area";
 
 type Props = {
   children: ReactNode;
@@ -36,6 +38,8 @@ export default function Layout({ children }: Props) {
                 border-l-2 border-gray-900"
       >
         <SearchInput />
+        <TrendingArea />
+        <RecomendationArea />
       </aside>
     </main>
   );
