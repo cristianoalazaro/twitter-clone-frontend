@@ -6,7 +6,7 @@ import React, { useState } from "react";
 
 type Props = {
     label: string;
-    onClick: () => void;
+    onClick?: () => void;
     size: 1 | 2 | 3;
 }
 
