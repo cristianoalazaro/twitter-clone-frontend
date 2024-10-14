@@ -6,6 +6,7 @@ import { faCamera, faLink, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function Page() {
   const isMe = true;
@@ -15,10 +16,10 @@ export default function Page() {
       <GeneralHeader backHref="/">
         <div className="font-bold text-lg">Editar Perfil</div>
       </GeneralHeader>
-      <section className="border-b-2 border-gray-900">
+      <section className="border-b-2 border-gray-900 pb-4">
         <div
           className="bg-gray-500 h-28 bg-no-repeat bg-cover bg-center
-                        flex justify-center items-center gap-4"
+                        flex justify-center items-center gap-4 mb-4"
           style={{ backgroundImage: "url(" + user.cover + ")" }}
         >
           <div
@@ -57,6 +58,11 @@ export default function Page() {
         </label>
         <label>
           <p className="text-lg text-gray-500 mb-2">Bio</p>
+          <Textarea 
+            placeholder="descreva você mesmo"
+            rows={4}
+            value={user.bio}
+          />
         </label>
         <label>
           <p className="text-lg text-gray-500 mb-2">Link</p>
